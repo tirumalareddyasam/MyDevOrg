@@ -1,0 +1,53 @@
+<template>
+    <lightning-card title="Vaarahi Travels">
+        <lightning-tabset variant="scoped">
+            <lightning-tab label="Bus">
+                <div class="slds-var-m-around_medium">
+                    <h2>Dear Passenger !!<br> Hope you are keeping well !!</h2>
+                </div>
+                <div class="slds-var-m-around_medium">
+                    <p> {wish} </p>
+                </div>
+                <div class="slds-var-m-around_medium">
+                    <lightning-input type="text" variant="standard" label="Enter Full Name" onchange={handlerChange}>
+                    </lightning-input>
+                    <h2>Preview: {greeting}</h2>
+                </div>
+                <div class="slds-var-m-around_medium">
+                    <lightning-button variant="brand" label="Show Details" onclick={handleClick}></lightning-button> &nbsp;
+                    <lightning-button variant="brand" label="Hide Details" onclick={handleClickhide}></lightning-button>
+                    <template if:true={isShow}>
+                        <h3>{greeting}</h3>
+                    </template>
+                </div>
+                <div class="slds-var-m-around_medium">
+                    <lightning-button variant="brand" label={labelaname} onclick={handletoggle}></lightning-button>
+                    <template if:true={toggleText}>
+                        <h3>{greeting}</h3>
+                    </template>
+                </div>
+            </lightning-tab>
+            <lightning-tab label="Flight">
+                
+    <!-- Spinner centered with your styles -->
+    <template if:true={isLoading}>
+        <div class="spinner-container">
+            <span class="loader"></span>
+        </div>
+    </template>
+
+                <lightning-datatable
+                    key-field="Id"
+                    data={dataList}
+                    show-row-number-column
+                    draft-values={draftValues}
+                    columns={columnsList}
+                    onsave={handleSave}>
+                </lightning-datatable>
+            </lightning-tab>
+            <lightning-tab label="Ship">
+                Three Content !
+            </lightning-tab>
+        </lightning-tabset>
+    </lightning-card>
+</template>
