@@ -12,8 +12,8 @@
             <h2>Shadow value: {greeting}</h2>
         </div>
         <div class="slds-var-m-around_medium">
-            <lightning-button variant="brand" label="Show Details" onclick={handleClick}></lightning-button> &nbsp;
-            <lightning-button variant="brand" label="Hide Details" onclick={handleClickhide}></lightning-button>
+            <lightning-button variant="brand" label="Show" onclick={handleClick}></lightning-button> &nbsp;
+            <lightning-button variant="brand" label="Hide" onclick={handleClickhide}></lightning-button>
             <template if:true={isShow}>
                 <h3>{greeting}</h3>
             </template>
