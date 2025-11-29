@@ -8,10 +8,10 @@ trigger AccountTrigger on Account (After insert){
 }
 
 
-Handler class:
-===========
+//Handler class:
+//===========
 
-Public class AccountTriggerHandler{
+/*public class AccountTriggerHandler{
 
 public static void updateOpportunitiesWhenHighValue(){
 
@@ -43,4 +43,4 @@ if(!oppsToUpdate.isEmpty()){
 }
 }
 
-}
+}*/

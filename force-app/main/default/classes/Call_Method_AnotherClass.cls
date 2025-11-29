@@ -25,7 +25,7 @@ system.debug(StuCourse);
     }
     @AuraEnabled
     public static List<Account> getAccounts(){
-        List<Account> accList = [SELECT Id, Name, Industry, Rating__c, AnnualRevenue FROM Account];
+        List<Account> accList = [SELECT Id, Name, Industry, Rating__c, AnnualRevenue FROM Account LIMIT 10];
         System.debug('Get data: ' + accList);
         return accList;
     }

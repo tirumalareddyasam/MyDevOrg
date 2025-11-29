@@ -1,0 +1,45 @@
+<template>
+  <lightning-card title="Arithmetic Operations">
+    <div class="slds-var-m-around_medium"> 
+      <p>is equal: {isEqual}</p>
+      <p>isnotequal: {isNotEqual}</p>
+      <p>greaterthan: {greaterthan}</p>
+      <p>Division: {divisionResult}</p>
+      <p>Modulo: {moduloResult}</p>
+      <p>andResult: {andResult}</p>
+      <p>orResult: {orResult}</p>
+      <p>notResult: {notResult}</p>
+    </div>
+    <div>
+      <p>{greetingMessage}</p>
+      <template if:false ={isLoggedIn}>
+        <lightning-button label="Login" onclick={handleLoginClick}> Login</lightning-button>
+      </template>
+      <template if:true={isLoggedIn}>
+        <lightning-button label="LogOut" onclick={handleLogoutClick}>LogOut</lightning-button>
+      </template>
+    </div>
+    {message}
+    <lightning-input type="number" label="Enter your age" value={userAge} onchange={handleAgeChange}></lightning-input>
+    <lightning-button label="Check Age" onclick={checkAge}></lightning-button>
+    <template if:true={resultMessage}>
+        <p class="slds-m-top_small">{resultMessage}</p>
+    </template>
+    <div>
+      <lightning-input type="text" label="Enter Day" value={currentDay} onchange={handleDayChange}></lightning-input>
+      <lightning-button variant="brand" label="Check Day" onclick={checkDay}></lightning-button>
+    <template if:true={dayMessage}>
+        <p class="slds-m-top_small">{dayMessage}</p>
+    </template>
+    </div>
+    <p>{getNumbers}</p>
+    <p>{findPowerOfTwo}</p>
+    <p>{getPositiveNumber}</p>
+    <p>Result: {result}</p>
+    <lightning-button label="Calculate" ondblclick={calculateNumbers}></lightning-button>
+    <lightning-button label="Scope" onclick={showScope}>{showScope}</lightning-button>
+    <lightning-button label="Area" onclick={calculateArea}></lightning-button>
+    <p>{area}</p>
+    <p>Hello, {fullName}</p>
+  </lightning-card>
+</template>
