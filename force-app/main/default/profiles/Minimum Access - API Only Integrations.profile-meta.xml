@@ -285,6 +285,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CreateAccountAPI</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CustomerDetails</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -413,6 +417,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>LearnIntegrationApex</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LearnIntegrationExposeApex</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>LightningForgotPasswordController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -470,6 +482,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>PostPriceChangeToSlackTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ProductExposeIntegration</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -546,6 +562,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>Test</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>YTController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>YouTubeResult</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1458,6 +1482,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Purchase_Order__c-Purchase Order Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SiqExchangeConnection-Exchange Connection Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Sticker__c-Sticker Layout</layout>

@@ -30,4 +30,33 @@
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
+    <outboundMessages>
+        <fullName>Sending_Data</fullName>
+        <apiVersion>65.0</apiVersion>
+        <endpointUrl>https://webhook.site/04767bb4-9454-49e2-936a-cf0497a0b00c</endpointUrl>
+        <fields>AnnualRevenue</fields>
+        <fields>BillingCity</fields>
+        <fields>BillingCountry</fields>
+        <fields>Id</fields>
+        <fields>Name</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>tirumalatiru078@mindful-panda-14ibi0.com</integrationUser>
+        <name>Sending Data</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Account details send to External System</fullName>
+        <actions>
+            <name>Sending_Data</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Rating__c</field>
+            <operation>equals</operation>
+            <value>Cold</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
 </Workflow>
